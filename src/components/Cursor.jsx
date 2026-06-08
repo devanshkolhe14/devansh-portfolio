@@ -23,7 +23,7 @@ export default function Cursor() {
 
   return (
     <div
-      className="fixed w-2 h-2 rounded-full bg-purple-500 pointer-events-none z-50"
+      className="fixed w-2 h-2 rounded-full bg-sky-400 pointer-events-none z-50"
       style={{
         left: position.x - 8,
         top: position.y - 8,

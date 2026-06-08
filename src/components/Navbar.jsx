@@ -8,13 +8,15 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
-        "home",
-        "about",
-        "skills",
-        "projects",
-        "experience",
-        "credentials",
-        "contact",
+         "home",
+  "about",
+  "services",
+  "skills",
+  "projects",
+  "why-hire-me",
+  "experience",
+  "credentials",
+  "contact",
       ];
 
       let current = "home";
@@ -25,12 +27,13 @@ export default function Navbar() {
         if (element) {
           const rect = element.getBoundingClientRect();
 
-          if (rect.top <= 150) {
-            current = section;
-          }
+          if (rect.top <= 200 && rect.bottom >= 200) {
+  current = section;
+}
         }
       });
 
+      console.log(current);
       setActiveSection(current);
     };
 
@@ -42,11 +45,13 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "About", id: "about" },
-    { name: "Skills", id: "skills" },
-    { name: "Projects", id: "projects" },
-    { name: "Experience", id: "experience" },
-    { name: "Credentials", id: "credentials" },
-    { name: "Contact", id: "contact" },
+  { name: "Services", id: "services" },
+  { name: "Skills", id: "skills" },
+  { name: "Projects", id: "projects" },
+  { name: "Why Hire Me", id: "why-hire-me" },
+  { name: "Experience", id: "experience" },
+  { name: "Credentials", id: "credentials" },
+  { name: "Contact", id: "contact" },
   ];
 
   return (
@@ -80,7 +85,7 @@ export default function Navbar() {
           className="
           text-2xl
           font-bold
-          text-purple-500
+          text-sky-400
           "
         >
           Devansh
@@ -104,8 +109,8 @@ export default function Navbar() {
                   duration-300
                   ${
                     activeSection === link.id
-                      ? "text-purple-500 font-semibold"
-                      : "text-gray-300 hover:text-purple-500"
+                      ? "text-sky-400 font-semibold"
+                      : "text-gray-300 hover:text-sky-400"
                   }
                 `}
               >
@@ -157,7 +162,7 @@ export default function Navbar() {
                     duration-300
                     ${
                       activeSection === link.id
-                        ? "text-purple-500 font-semibold"
+                        ? "text-sky-400 font-semibold"
                         : "text-gray-300"
                     }
                   `}

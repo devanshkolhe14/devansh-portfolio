@@ -76,7 +76,7 @@ export default function Contact() {
         absolute
         w-[700px]
         h-[700px]
-        bg-purple-600/10
+        bg-sky-500/10
         blur-[180px]
         rounded-full
         left-1/2
@@ -96,7 +96,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="text-purple-400 mb-3">
+          <p className="text-sky-400 mb-3">
             Get In Touch
           </p>
 
@@ -135,7 +135,7 @@ export default function Contact() {
 
               <a
                 href="mailto:devanshkolhe95@gmail.com"
-                className="flex items-center gap-4 hover:text-purple-400 transition"
+                className="flex items-center gap-4 hover:text-sky-400 transition"
               >
                 <FaEnvelope size={28} />
                 <span>devanshkolhe95@gmail.com</span>
@@ -145,7 +145,7 @@ export default function Contact() {
                 href="https://github.com/devanshkolhe14"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 hover:text-purple-400 transition"
+                className="flex items-center gap-4 hover:text-sky-400 transition"
               >
                 <FaGithub size={28} />
                 <span>github.com/devanshkolhe14</span>
@@ -155,7 +155,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/devansh-kolhe-7ba635204/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 hover:text-purple-400 transition"
+                className="flex items-center gap-4 hover:text-sky-400 transition"
               >
                 <FaLinkedin size={28} />
                 <span>LinkedIn Profile</span>
@@ -196,7 +196,7 @@ export default function Contact() {
                 rounded-xl
                 p-4
                 outline-none
-                focus:border-purple-500
+                focus:border-sky-400
                 "
               />
 
@@ -215,7 +215,7 @@ export default function Contact() {
                 rounded-xl
                 p-4
                 outline-none
-                focus:border-purple-500
+                focus:border-sky-400
                 "
               />
 
@@ -235,7 +235,7 @@ export default function Contact() {
                 p-4
                 outline-none
                 resize-none
-                focus:border-purple-500
+                focus:border-sky-400
                 "
               />
 
@@ -244,8 +244,8 @@ export default function Contact() {
                 disabled={loading}
                 className="
                 w-full
-                bg-purple-600
-                hover:bg-purple-700
+                bg-sky-500
+                hover:bg-sky-600
                 rounded-xl
                 py-4
                 font-semibold

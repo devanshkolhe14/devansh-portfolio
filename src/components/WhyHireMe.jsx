@@ -1,45 +1,61 @@
 import { motion } from "framer-motion";
 import {
-  FaLaptopCode,
-  FaReact,
+  FaCode,
   FaMobileAlt,
   FaRocket,
+  FaUsers,
+  FaCheckCircle,
+  FaLaptopCode,
 } from "react-icons/fa";
 
-const services = [
+const reasons = [
   {
-    icon: <FaLaptopCode size={40} />,
-    title: "Frontend Development",
+    icon: <FaCode size={40} />,
+    title: "Clean Code",
     description:
-      "Building modern, responsive and user-friendly websites using HTML, CSS, JavaScript and industry best practices.",
-  },
-
-  {
-    icon: <FaReact size={40} />,
-    title: "React Development",
-    description:
-      "Creating dynamic single-page applications with React, reusable components and modern frontend architecture.",
+      "I write structured, maintainable and scalable frontend code using modern development practices.",
   },
 
   {
     icon: <FaMobileAlt size={40} />,
-    title: "Responsive Web Design",
+    title: "Responsive Design",
     description:
-      "Designing websites that work perfectly across desktops, tablets and mobile devices with seamless user experiences.",
+      "Every website is optimized for desktop, tablet and mobile devices for the best user experience.",
   },
 
   {
     icon: <FaRocket size={40} />,
-    title: "Website Optimization",
+    title: "Performance Focused",
     description:
-      "Improving website performance, loading speed, SEO fundamentals and overall user experience.",
+      "Fast loading websites with optimized assets and smooth user interactions.",
+  },
+
+  {
+    icon: <FaUsers size={40} />,
+    title: "Client Friendly",
+    description:
+      "Clear communication, regular updates and reliable project delivery.",
+  },
+
+  {
+    icon: <FaLaptopCode size={40} />,
+    title: "Modern Technologies",
+    description:
+      "Experienced with HTML, CSS, JavaScript, React, Tailwind CSS and GitHub workflows.",
+  },
+
+  {
+    icon: <FaCheckCircle size={40} />,
+    title: "Quality Assurance",
+    description:
+      "Focused on creating bug-free, user-friendly and professional web experiences.",
   },
 ];
 
-export default function Services() {
+export default function WhyHireMe() {
   return (
     <section
-      id="services"
+      id="why-hire-me"
       className="
       relative
       min-h-screen
@@ -51,7 +67,7 @@ export default function Services() {
       overflow-hidden
       "
     >
-      {/* Background Glow */}
+      {/* Purple Glow */}
       <div
         className="
         absolute
@@ -82,7 +98,7 @@ export default function Services() {
           className="text-center mb-20"
         >
           <p className="text-sky-400 mb-3">
-            What I Do
+            Why Choose Me
           </p>
 
           <h2
@@ -93,7 +109,7 @@ export default function Services() {
             mb-6
             "
           >
-            Services
+            Why Hire Me?
           </h2>
 
           <p
@@ -104,28 +120,28 @@ export default function Services() {
             mx-auto
             "
           >
-            I help businesses and individuals build
-            fast, modern and responsive websites with
-            clean user interfaces and professional
-            frontend development practices.
+            I combine technical skills, modern frontend
+            development practices and attention to detail
+            to create professional websites that deliver
+            real value.
           </p>
         </motion.div>
 
-        {/* Service Cards */}
+        {/* Cards */}
         <div
           className="
           grid
           md:grid-cols-2
-          lg:grid-cols-4
+          lg:grid-cols-3
           gap-8
           "
         >
-          {services.map((service, index) => (
+          {reasons.map((item, index) => (
             <motion.div
               key={index}
               initial={{
                 opacity: 0,
-                y: 60,
+                y: 50,
               }}
               whileInView={{
                 opacity: 1,
@@ -133,8 +149,8 @@ export default function Services() {
               }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.15,
+                duration: 0.5,
+                delay: index * 0.1,
               }}
               whileHover={{
                 y: -10,
@@ -153,13 +169,8 @@ export default function Services() {
               duration-300
               "
             >
-              <div
-                className="
-                text-sky-400
-                mb-6
-                "
-              >
-                {service.icon}
+              <div className="text-sky-400 mb-6">
+                {item.icon}
               </div>
 
               <h3
@@ -169,7 +180,7 @@ export default function Services() {
                 mb-4
                 "
               >
-                {service.title}
+                {item.title}
               </h3>
 
               <p
@@ -178,11 +189,51 @@ export default function Services() {
                 leading-8
                 "
               >
-                {service.description}
+                {item.description}
               </p>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="
+          text-center
+          mt-20
+          "
+        >
+          <h3 className="text-3xl font-bold mb-6">
+            Ready To Work Together?
+          </h3>
+
+          <a
+            href="#contact"
+            className="
+            inline-block
+            bg-sky-500
+            hover:bg-sky-600
+            px-8
+            py-4
+            rounded-xl
+            transition
+            duration-300
+            "
+          >
+            Contact Me
+          </a>
+        </motion.div>
 
       </div>
     </section>

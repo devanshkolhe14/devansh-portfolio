@@ -23,7 +23,7 @@ export default function ScrollProgress() {
 
   return (
     <div
-      className="fixed top-0 left-0 h-1 bg-purple-500 z-[9999]"
+      className="fixed top-0 left-0 h-1 bg-sky-400 z-[9999]"
       style={{ width: `${scroll}%` }}
     />
   );

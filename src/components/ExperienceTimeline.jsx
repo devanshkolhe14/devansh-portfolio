@@ -65,7 +65,7 @@ export default function ExperienceTimeline() {
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
-          <p className="text-purple-400 mb-3">
+          <p className="text-sky-400 mb-3">
             Professional Journey
           </p>
 
@@ -90,7 +90,7 @@ export default function ExperienceTimeline() {
             h-full
             w-1
             bg-gradient-to-b
-            from-purple-500
+            from-sky-400
             to-purple-800
             -translate-x-1/2
             "
@@ -115,10 +115,9 @@ export default function ExperienceTimeline() {
                 relative
                 flex
                 mb-16
-                ${
-                  index % 2 === 0
-                    ? "md:justify-start"
-                    : "md:justify-end"
+                ${index % 2 === 0
+                  ? "md:justify-start"
+                  : "md:justify-end"
                 }
               `}
             >
@@ -133,14 +132,14 @@ export default function ExperienceTimeline() {
                 backdrop-blur-lg
                 rounded-3xl
                 p-8
-                hover:border-purple-500
+                hover:border-sky-400
                 hover:shadow-[0_0_40px_rgba(168,85,247,0.25)]
                 transition-all
                 duration-300
                 "
               >
 
-                <span className="text-purple-400 font-semibold">
+                <span className="text-sky-400 font-semibold">
                   {item.year}
                 </span>
 
@@ -148,11 +147,11 @@ export default function ExperienceTimeline() {
                   {item.title}
                 </h3>
 
-                <h4 className="text-purple-300 mt-2">
+                <h4 className="text-sky-300 mt-2">
                   {item.company}
                 </h4>
 
-                <p className="text-gray-400 mt-4 leading-7">
+                <p className="text-gray-300 mt-4 leading-7">
                   {item.description}
                 </p>
 
@@ -168,7 +167,7 @@ export default function ExperienceTimeline() {
                 w-5
                 h-5
                 rounded-full
-                bg-purple-500
+                bg-sky-400
                 shadow-[0_0_25px_#a855f7]
                 -translate-x-1/2
                 "

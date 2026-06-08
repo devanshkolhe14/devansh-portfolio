@@ -29,7 +29,7 @@ export default function Credentials() {
             transition={{ duration: 0.7 }}
             className="text-center mb-20"
           >
-            <p className="text-purple-400 mb-3">
+            <p className="text-sky-400 mb-3">
               Credentials & Verification
             </p>
 
@@ -63,7 +63,7 @@ export default function Credentials() {
               rounded-3xl
               overflow-hidden
               backdrop-blur-lg
-              hover:border-purple-500
+              hover:border-sky-400
               hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]
               transition-all
               duration-300
@@ -109,7 +109,7 @@ export default function Credentials() {
 
                 <div className="flex items-center gap-3 mb-4">
                   <FaBriefcase
-                    className="text-purple-500"
+                    className="text-sky-400"
                     size={24}
                   />
 
@@ -118,7 +118,7 @@ export default function Credentials() {
                   </h3>
                 </div>
 
-                <p className="text-purple-400 mb-3">
+                <p className="text-sky-400 mb-3">
                   Mesotek Technologies Pvt. Ltd.
                 </p>
 
@@ -149,7 +149,7 @@ export default function Credentials() {
               rounded-3xl
               overflow-hidden
               backdrop-blur-lg
-              hover:border-purple-500
+              hover:border-sky-400
               hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]
               transition-all
               duration-300
@@ -198,7 +198,7 @@ export default function Credentials() {
                 <div className="flex items-center gap-3 mb-4">
 
                   <FaCertificate
-                    className="text-purple-500"
+                    className="text-sky-400"
                     size={24}
                   />
 
@@ -208,7 +208,7 @@ export default function Credentials() {
 
                 </div>
 
-                <p className="text-purple-400 mb-3">
+                <p className="text-sky-400 mb-3">
                   Professional Certification
                 </p>
 

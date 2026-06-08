@@ -22,7 +22,7 @@ export default function Footer() {
                 Devansh
               </span>
 
-              <span className="text-purple-500">
+              <span className="text-sky-400">
                 {" "}Kolhe
               </span>
             </h2>
@@ -52,7 +52,7 @@ export default function Footer() {
                 flex
                 items-center
                 justify-center
-                hover:bg-purple-600
+                hover:bg-sky-500
                 hover:scale-110
                 transition-all
                 duration-300
@@ -75,7 +75,7 @@ export default function Footer() {
                 flex
                 items-center
                 justify-center
-                hover:bg-purple-600
+                hover:bg-sky-500
                 hover:scale-110
                 transition-all
                 duration-300
@@ -96,7 +96,7 @@ export default function Footer() {
                 flex
                 items-center
                 justify-center
-                hover:bg-purple-600
+                hover:bg-sky-500
                 hover:scale-110
                 transition-all
                 duration-300
@@ -121,7 +121,7 @@ export default function Footer() {
 
           <p className="text-gray-500 text-sm flex items-center gap-2">
             Made with
-            <FaHeart className="text-purple-500" />
+            <FaHeart className="text-sky-400" />
             using React & Tailwind CSS
           </p>
 

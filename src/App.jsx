@@ -12,6 +12,7 @@ import ExperienceTimeline from "./components/ExperienceTimeline";
 import Credentials from "./components/Credentials";
 import ScrollProgress from "./components/ScrollProgress";
 import Services from "./components/Services";
+import WhyHireMe from "./components/WhyHireMe";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,7 +28,7 @@ function App() {
   if (loading) {
     return (
       <div className="h-screen flex flex-col items-center justify-center bg-[#050816] text-white">
-        <h1 className="text-6xl font-bold text-purple-500 animate-pulse">
+        <h1 className="text-6xl font-bold text-sky-400 animate-pulse">
           DEVANSH
         </h1>
 
@@ -36,7 +37,7 @@ function App() {
         </p>
 
         <div className="w-40 h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
-          <div className="h-full bg-purple-500 animate-[loading_2.5s_linear_forwards]" />
+          <div className="h-full bg-sky-400 animate-[loading_2.5s_linear_forwards]" />
         </div>
       </div>
     );
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <>
+
   <ScrollProgress />
 
   <MouseGlow />
@@ -56,6 +58,7 @@ function App() {
     <Services />
     <Skills />
     <Projects />
+    <WhyHireMe />
     <ExperienceTimeline />
     <Credentials />
     <Contact />

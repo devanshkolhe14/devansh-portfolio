@@ -7,7 +7,7 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden px-6"
     >
       {/* Background Glow */}
-      <div className="absolute w-[700px] h-[700px] bg-purple-500/20 blur-[220px] rounded-full animate-pulse"></div>
+      <div className="absolute w-[700px] h-[700px] bg-sky-400/20 blur-[220px] rounded-full animate-pulse"></div>
 
       <div className="relative z-10 text-center max-w-5xl">
         {/* Welcome Text */}
@@ -15,7 +15,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-purple-400 text-lg mb-4 tracking-widest uppercase"
+          className="text-sky-400 text-lg mb-4 tracking-widest uppercase"
         >
           Welcome To My Portfolio
         </motion.p>
@@ -28,7 +28,7 @@ export default function Hero() {
           className="text-6xl md:text-8xl font-bold leading-tight"
         >
           <span className="text-white">Devansh</span>
-          <span className="text-purple-500"> Kolhe</span>
+          <span className="text-sky-400"> Kolhe</span>
         </motion.h1>
 
         {/* Role */}
@@ -95,8 +95,8 @@ export default function Hero() {
           <a
             href="#projects"
             className="
-              bg-purple-600
-              hover:bg-purple-700
+              bg-sky-500
+              hover:bg-sky-600
               px-8
               py-4
               rounded-xl
@@ -112,8 +112,8 @@ export default function Hero() {
             download
             className="
               border
-              border-purple-500
-              hover:bg-purple-500
+              border-sky-400
+              hover:bg-sky-400
               px-8
               py-4
               rounded-xl
@@ -142,7 +142,7 @@ export default function Hero() {
           "
         >
           <motion.div whileHover={{ scale: 1.1 }}>
-            <h3 className="text-5xl font-bold text-purple-500">
+            <h3 className="text-5xl font-bold text-sky-400">
               2+
             </h3>
 
@@ -152,7 +152,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }}>
-            <h3 className="text-5xl font-bold text-purple-500">
+            <h3 className="text-5xl font-bold text-sky-400">
               8+
             </h3>
 
@@ -162,8 +162,8 @@ export default function Hero() {
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }}>
-            <h3 className="text-5xl font-bold text-purple-500">
-              1
+            <h3 className="text-5xl font-bold text-sky-400">
+              1+
             </h3>
 
             <p className="text-gray-400 mt-2">

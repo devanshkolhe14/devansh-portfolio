@@ -30,7 +30,7 @@ export default function MouseGlow() {
       h-[400px]
       rounded-full
       blur-[120px]
-      bg-purple-600/20
+      bg-sky-500/20
       transition-all
       duration-200
       "

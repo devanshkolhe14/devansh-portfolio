@@ -114,7 +114,7 @@ export default function Projects() {
 
           {/* Heading */}
           <div className="text-center mb-16">
-            <p className="text-purple-400 mb-3">
+            <p className="text-sky-400 mb-3">
               My Work
             </p>
 
@@ -140,7 +140,7 @@ export default function Projects() {
                 rounded-3xl
                 overflow-hidden
                 backdrop-blur-lg
-                hover:border-purple-500
+                hover:border-sky-400
                 transition-all
                 duration-300
                 "
@@ -161,7 +161,7 @@ export default function Projects() {
 
                 <div className="p-8">
 
-                  <p className="text-purple-400 text-sm mb-2">
+                  <p className="text-sky-400 text-sm mb-2">
                     Project {project.number}
                   </p>
 
@@ -178,8 +178,8 @@ export default function Projects() {
                       setSelectedProject(project)
                     }
                     className="
-                    bg-purple-600
-                    hover:bg-purple-700
+                    bg-sky-500
+                    hover:bg-sky-600
                     px-6
                     py-3
                     rounded-xl
@@ -227,8 +227,8 @@ export default function Projects() {
           w-14
           h-14
           rounded-full
-          bg-purple-600
-          hover:bg-purple-700
+          bg-sky-500
+          hover:bg-sky-600
           flex
           items-center
           justify-center
@@ -255,37 +255,48 @@ export default function Projects() {
         >
 
           {/* Slider */}
-          <Swiper
-            modules={[
-              Pagination,
-              Navigation,
-              Autoplay,
-            ]}
-            navigation
-            pagination={{
-              clickable: true,
-            }}
-            autoplay={{
-              delay: 3000,
-            }}
-            className="h-[500px]"
-          >
-            {selectedProject.images.map(
-              (image, index) => (
-                <SwiperSlide key={index}>
-                  <img
-                    src={image}
-                    alt=""
-                    className="
-                    w-full
-                    h-full
-                    object-cover
-                    "
-                  />
-                </SwiperSlide>
-              )
-            )}
-          </Swiper>
+<Swiper
+  modules={[
+    Pagination,
+    Navigation,
+    Autoplay,
+  ]}
+  navigation
+  pagination={{
+    clickable: true,
+  }}
+  autoplay={{
+    delay: 3000,
+  }}
+  className="w-full"
+>
+  {selectedProject.images.map(
+    (image, index) => (
+      <SwiperSlide key={index}>
+        <div
+          className="
+          flex
+          justify-center
+          items-center
+          bg-black
+          p-4
+          "
+        >
+          <img
+            src={image}
+            alt=""
+            className="
+            w-full
+            max-h-[650px]
+            object-contain
+            rounded-xl
+            "
+          />
+        </div>
+      </SwiperSlide>
+    )
+  )}
+</Swiper>
 
           <div className="p-8">
 
@@ -314,9 +325,9 @@ export default function Projects() {
     px-4
     py-2
     rounded-full
-    bg-purple-500/20
+    bg-sky-400/20
     border
-    border-purple-500
+    border-sky-400
     text-sm
     "
   >
@@ -336,9 +347,9 @@ export default function Projects() {
     px-4
     py-2
     rounded-full
-    bg-purple-500/20
+    bg-sky-400/20
     border
-    border-purple-500
+    border-sky-400
     "
   >
     {selectedProject.type}
@@ -349,9 +360,9 @@ export default function Projects() {
     px-4
     py-2
     rounded-full
-    bg-purple-500/20
+    bg-sky-400/20
     border
-    border-purple-500
+    border-sky-400
     "
   >
     {selectedProject.duration}
@@ -376,7 +387,7 @@ export default function Projects() {
                     "
                   >
                     <FaCheckCircle
-                      className="text-purple-500"
+                      className="text-sky-400"
                     />
 
                     <span>{feature}</span>
@@ -423,9 +434,9 @@ export default function Projects() {
                     px-4
                     py-2
                     rounded-full
-                    bg-purple-500/20
+                    bg-sky-400/20
                     border
-                    border-purple-500
+                    border-sky-400
                     "
                   >
                     {tech}
@@ -442,8 +453,8 @@ export default function Projects() {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                bg-purple-600
-                hover:bg-purple-700
+                bg-sky-500
+                hover:bg-sky-600
                 px-6
                 py-3
                 rounded-xl
@@ -462,8 +473,8 @@ export default function Projects() {
                 rel="noreferrer"
                 className="
                 border
-                border-purple-500
-                hover:bg-purple-500
+                border-sky-400
+                hover:bg-sky-400
                 px-6
                 py-3
                 rounded-xl

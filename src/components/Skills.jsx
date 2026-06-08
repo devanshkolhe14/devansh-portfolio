@@ -6,6 +6,7 @@ import {
   FaReact,
   FaGithub,
   FaGitAlt,
+  FaMobileAlt,
 } from "react-icons/fa";
 
 import { SiTailwindcss } from "react-icons/si";
@@ -14,27 +15,27 @@ const frontendSkills = [
   {
     name: "HTML5",
     percentage: 95,
-    icon: <FaHtml5 size={35} />,
+    icon: <FaHtml5 size={40} />,
   },
   {
     name: "CSS3",
     percentage: 90,
-    icon: <FaCss3Alt size={35} />,
+    icon: <FaCss3Alt size={40} />,
   },
   {
     name: "JavaScript",
     percentage: 85,
-    icon: <FaJs size={35} />,
+    icon: <FaJs size={40} />,
   },
   {
     name: "React",
     percentage: 80,
-    icon: <FaReact size={35} />,
+    icon: <FaReact size={40} />,
   },
   {
     name: "Tailwind CSS",
     percentage: 90,
-    icon: <SiTailwindcss size={35} />,
+    icon: <SiTailwindcss size={40} />,
   },
 ];
 
@@ -42,17 +43,17 @@ const toolsSkills = [
   {
     name: "Git",
     percentage: 85,
-    icon: <FaGitAlt size={35} />,
+    icon: <FaGitAlt size={40} />,
   },
   {
     name: "GitHub",
     percentage: 90,
-    icon: <FaGithub size={35} />,
+    icon: <FaGithub size={40} />,
   },
   {
     name: "Responsive Design",
     percentage: 95,
-    icon: "📱",
+    icon: <FaMobileAlt size={40} />,
   },
 ];
 
@@ -83,18 +84,18 @@ function SkillCard({ skill, index }) {
       border-white/10
       rounded-3xl
       p-6
-      hover:border-purple-500
+      hover:border-sky-400
       hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]
       transition-all
       duration-300
       "
     >
       <div className="flex items-center justify-between mb-4">
-        <div className="text-purple-400">
+        <div className="text-sky-400">
           {skill.icon}
         </div>
 
-        <span className="font-bold text-purple-400">
+        <span className="font-bold text-sky-400">
           {skill.percentage}%
         </span>
       </div>
@@ -117,8 +118,8 @@ function SkillCard({ skill, index }) {
           className="
           h-full
           bg-gradient-to-r
-          from-purple-500
-          to-fuchsia-500
+          from-sky-400
+          to-cyan-400
           rounded-full
           "
         />
@@ -143,7 +144,7 @@ export default function Skills() {
       "
     >
       {/* Background Glow */}
-      <div className="absolute w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full"></div>
+      <div className="absolute w-[700px] h-[700px] bg-sky-500/10 blur-[180px] rounded-full"></div>
 
       <div className="max-w-7xl w-full relative z-10">
 
@@ -163,7 +164,7 @@ export default function Skills() {
           }}
           className="text-center mb-20"
         >
-          <p className="text-purple-400 mb-3">
+          <p className="text-sky-400 mb-3">
             My Skills
           </p>
 
@@ -189,7 +190,7 @@ export default function Skills() {
             font-bold
             mb-10
             text-center
-            text-purple-400
+            text-sky-400
             "
           >
             Frontend Development
@@ -217,7 +218,7 @@ export default function Skills() {
             font-bold
             mb-10
             text-center
-            text-purple-400
+            text-sky-400
             "
           >
             Tools & Workflow
