@@ -10,54 +10,157 @@ import {
 
 import { SiTailwindcss } from "react-icons/si";
 
-const skills = [
+const frontendSkills = [
   {
     name: "HTML5",
-    icon: <FaHtml5 size={45} />,
+    percentage: 95,
+    icon: <FaHtml5 size={35} />,
   },
   {
     name: "CSS3",
-    icon: <FaCss3Alt size={45} />,
+    percentage: 90,
+    icon: <FaCss3Alt size={35} />,
   },
   {
     name: "JavaScript",
-    icon: <FaJs size={45} />,
+    percentage: 85,
+    icon: <FaJs size={35} />,
   },
   {
     name: "React",
-    icon: <FaReact size={45} />,
+    percentage: 80,
+    icon: <FaReact size={35} />,
   },
   {
     name: "Tailwind CSS",
-    icon: <SiTailwindcss size={45} />,
+    percentage: 90,
+    icon: <SiTailwindcss size={35} />,
   },
+];
+
+const toolsSkills = [
   {
     name: "Git",
-    icon: <FaGitAlt size={45} />,
+    percentage: 85,
+    icon: <FaGitAlt size={35} />,
   },
   {
     name: "GitHub",
-    icon: <FaGithub size={45} />,
+    percentage: 90,
+    icon: <FaGithub size={35} />,
   },
   {
     name: "Responsive Design",
+    percentage: 95,
     icon: "📱",
   },
 ];
+
+function SkillCard({ skill, index }) {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{ once: true }}
+      transition={{
+        delay: index * 0.1,
+        duration: 0.6,
+      }}
+      whileHover={{
+        scale: 1.03,
+        y: -8,
+      }}
+      className="
+      bg-white/5
+      backdrop-blur-md
+      border
+      border-white/10
+      rounded-3xl
+      p-6
+      hover:border-purple-500
+      hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]
+      transition-all
+      duration-300
+      "
+    >
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-purple-400">
+          {skill.icon}
+        </div>
+
+        <span className="font-bold text-purple-400">
+          {skill.percentage}%
+        </span>
+      </div>
+
+      <h3 className="text-lg font-semibold mb-4">
+        {skill.name}
+      </h3>
+
+      <div className="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{
+            width: `${skill.percentage}%`,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+          className="
+          h-full
+          bg-gradient-to-r
+          from-purple-500
+          to-fuchsia-500
+          rounded-full
+          "
+        />
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center justify-center px-6 py-20"
+      className="
+      min-h-screen
+      flex
+      items-center
+      justify-center
+      px-6
+      py-24
+      relative
+      overflow-hidden
+      "
     >
-      <div className="max-w-7xl w-full">
+      {/* Background Glow */}
+      <div className="absolute w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full"></div>
 
+      <div className="max-w-7xl w-full relative z-10">
+
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
           viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+          }}
           className="text-center mb-20"
         >
           <p className="text-purple-400 mb-3">
@@ -68,57 +171,67 @@ export default function Skills() {
             Technologies I Use
           </h2>
 
-          <p className="text-gray-400 text-lg">
-            Tools and technologies I use to build modern websites.
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            Technologies and tools I use to create
+            modern, responsive and high-performing
+            web applications.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8">
+        {/* Frontend Skills */}
+        <div className="mb-20">
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="
+            text-3xl
+            font-bold
+            mb-10
+            text-center
+            text-purple-400
+            "
+          >
+            Frontend Development
+          </motion.h3>
 
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              initial={{
-                opacity: 0,
-                y: 60,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{ once: true }}
-              transition={{
-                delay: index * 0.1,
-                duration: 0.5,
-              }}
-              whileHover={{
-                y: -12,
-                scale: 1.05,
-              }}
-              className="
-              bg-white/5
-              border
-              border-white/10
-              rounded-3xl
-              p-8
-              text-center
-              backdrop-blur-sm
-              hover:border-purple-500
-              hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]
-              transition-all
-              duration-300
-              "
-            >
-              <div className="flex justify-center mb-5 text-purple-400">
-                {skill.icon}
-              </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {frontendSkills.map((skill, index) => (
+              <SkillCard
+                key={index}
+                skill={skill}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
 
-              <h3 className="font-semibold text-lg">
-                {skill.name}
-              </h3>
-            </motion.div>
-          ))}
+        {/* Tools */}
+        <div>
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="
+            text-3xl
+            font-bold
+            mb-10
+            text-center
+            text-purple-400
+            "
+          >
+            Tools & Workflow
+          </motion.h3>
 
+          <div className="grid md:grid-cols-3 gap-8">
+            {toolsSkills.map((skill, index) => (
+              <SkillCard
+                key={index}
+                skill={skill}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
 
       </div>

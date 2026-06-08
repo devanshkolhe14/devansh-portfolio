@@ -11,6 +11,7 @@ import MouseGlow from "./components/MouseGlow";
 import ExperienceTimeline from "./components/ExperienceTimeline";
 import Credentials from "./components/Credentials";
 import ScrollProgress from "./components/ScrollProgress";
+import Services from "./components/Services";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ function App() {
   <main className="relative z-10">
     <Hero />
     <About />
+    <Services />
     <Skills />
     <Projects />
     <ExperienceTimeline />

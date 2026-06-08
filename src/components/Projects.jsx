@@ -32,50 +32,73 @@ import f6 from "../assets/projects/fastfood/6.jpg";
 
 const projects = [
   {
-    number: "01",
-    title: "Travique Travel Website",
+  number: "01",
+  title: "Travique Travel Website",
 
-    description:
-      "Modern travel website with responsive layouts, smooth navigation and engaging user experience built using HTML, CSS and JavaScript.",
+  description:
+    "Modern travel website with responsive layouts, smooth navigation and engaging user experience built using HTML, CSS and JavaScript.",
 
-    tech: ["HTML", "CSS", "JavaScript"],
+  tech: ["HTML", "CSS", "JavaScript"],
 
-    features: [
-      "Fully Responsive Design",
-      "Modern Travel UI",
-      "Interactive Sections",
-      "Mobile Friendly Layout",
-      "Optimized Performance",
-    ],
+  type: "Frontend Website",
+  duration: "2 Weeks",
 
-    images: [t1, t2, t3, t4, t5, t6],
+  challenge:
+    "Creating a visually appealing travel website that works smoothly across all devices while maintaining performance.",
 
-    github: "https://github.com/devanshkolhe14",
-    live: "https://travique-travel.netlify.app",
-  },
+  solution:
+    "Implemented a responsive layout with optimized sections, clean navigation and engaging user experience.",
 
-  {
-    number: "02",
-    title: "Fast Food Restaurant Website",
+  result:
+    "Delivered a modern travel website with excellent responsiveness and improved user engagement.",
 
-    description:
-      "Modern restaurant website featuring attractive layouts, responsive design and engaging food presentation.",
+  features: [
+    "Responsive Design",
+    "Travel Packages",
+    "Modern UI",
+    "Mobile Friendly",
+    "Smooth Navigation",
+  ],
 
-    tech: ["HTML", "CSS", "JavaScript"],
+  images: [t1, t2, t3, t4, t5, t6],
 
-    features: [
-      "Responsive Restaurant Design",
-      "Interactive Food Menu",
-      "Modern User Interface",
-      "Mobile Optimized",
-      "Fast Loading Experience",
-    ],
+  github: "https://github.com/devanshkolhe14/travique-travel",
+  live: "https://travique-travel.netlify.app",
+},
+{
+  number: "02",
+  title: "Fast Food Restaurant Website",
 
-    images: [f1, f2, f3, f4, f5, f6],
+  description:
+    "Modern restaurant website featuring attractive layouts, responsive design and engaging food presentation.",
 
-    github: "https://github.com/devanshkolhe14",
-    live: "https://fastfoodsrestaurant.netlify.app",
-  },
+  tech: ["HTML", "CSS", "JavaScript"],
+
+  type: "Restaurant Website",
+  duration: "1 Week",
+
+  challenge:
+    "Creating an attractive restaurant website that showcases food items effectively and performs well on mobile devices.",
+
+  solution:
+    "Designed a responsive user interface with organized content sections and engaging visual presentation.",
+
+  result:
+    "Delivered a fast-loading restaurant website with modern design and improved usability.",
+
+  features: [
+    "Responsive Design",
+    "Food Menu",
+    "Modern Layout",
+    "Mobile Friendly",
+    "Landing Page",
+  ],
+
+  images: [f1, f2, f3, f4, f5, f6],
+
+  github: "https://github.com/devanshkolhe14",
+  live: "https://fastfoodsrestaurant.netlify.app",
+},
 ];
 
 export default function Projects() {
@@ -163,7 +186,7 @@ export default function Projects() {
                     transition
                     "
                   >
-                    View Details
+                    View Case Study →
                   </button>
 
                 </div>
@@ -267,12 +290,74 @@ export default function Projects() {
           <div className="p-8">
 
             <h2 className="text-4xl font-bold mb-4">
-              {selectedProject.title}
-            </h2>
+  {selectedProject.title}
+</h2>
 
-            <p className="text-gray-400 leading-8 mb-8">
-              {selectedProject.description}
-            </p>
+<div className="flex flex-wrap gap-3 mb-6">
+
+  <span
+    className="
+    px-4
+    py-2
+    rounded-full
+    bg-green-500/20
+    border
+    border-green-500
+    text-sm
+    "
+  >
+    Completed
+  </span>
+
+  <span
+    className="
+    px-4
+    py-2
+    rounded-full
+    bg-purple-500/20
+    border
+    border-purple-500
+    text-sm
+    "
+  >
+    Frontend Project
+  </span>
+
+</div>
+
+<p className="text-gray-400 leading-8 mb-8">
+  {selectedProject.description}
+</p>
+
+            <div className="flex flex-wrap gap-3 mb-10">
+
+  <span
+    className="
+    px-4
+    py-2
+    rounded-full
+    bg-purple-500/20
+    border
+    border-purple-500
+    "
+  >
+    {selectedProject.type}
+  </span>
+
+  <span
+    className="
+    px-4
+    py-2
+    rounded-full
+    bg-purple-500/20
+    border
+    border-purple-500
+    "
+  >
+    {selectedProject.duration}
+  </span>
+
+</div>
 
             {/* Features */}
             <h3 className="text-2xl font-bold mb-5">
@@ -299,6 +384,30 @@ export default function Projects() {
                 )
               )}
             </div>
+
+            <h3 className="text-2xl font-bold mb-5">
+  Challenge
+</h3>
+
+<p className="text-gray-400 leading-8 mb-8">
+  {selectedProject.challenge}
+</p>
+
+<h3 className="text-2xl font-bold mb-5">
+  Solution
+</h3>
+
+<p className="text-gray-400 leading-8 mb-8">
+  {selectedProject.solution}
+</p>
+
+<h3 className="text-2xl font-bold mb-5">
+  Result
+</h3>
+
+<p className="text-gray-400 leading-8 mb-10">
+  {selectedProject.result}
+</p>
 
             {/* Tech Stack */}
             <h3 className="text-2xl font-bold mb-5">
