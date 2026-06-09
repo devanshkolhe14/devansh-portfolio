@@ -28,13 +28,9 @@ function App() {
   if (loading) {
     return (
       <div className="h-screen flex flex-col items-center justify-center bg-[#050816] text-white">
-        <h1 className="text-6xl font-bold text-sky-400 animate-pulse">
-          DEVANSH
-        </h1>
+        <h1 className="text-6xl font-bold text-sky-400 animate-pulse">DEVANSH</h1>
 
-        <p className="text-gray-400 mt-4">
-          Frontend Developer
-        </p>
+        <p className="text-gray-400 mt-4">Frontend Developer</p>
 
         <div className="w-40 h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
           <div className="h-full bg-sky-400 animate-[loading_2.5s_linear_forwards]" />
@@ -45,11 +41,8 @@ function App() {
 
   return (
     <>
-
   <ScrollProgress />
-
   <MouseGlow />
-
   <Navbar />
 
   <main className="relative z-10">

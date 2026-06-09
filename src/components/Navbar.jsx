@@ -8,15 +8,15 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
-         "home",
-  "about",
-  "services",
-  "skills",
-  "projects",
-  "why-hire-me",
-  "experience",
-  "credentials",
-  "contact",
+        "home",
+        "about",
+        "services",
+        "skills",
+        "projects",
+        "why-hire-me",
+        "experience",
+        "credentials",
+        "contact",
       ];
 
       let current = "home";
@@ -28,8 +28,8 @@ export default function Navbar() {
           const rect = element.getBoundingClientRect();
 
           if (rect.top <= 200 && rect.bottom >= 200) {
-  current = section;
-}
+            current = section;
+          }
         }
       });
 
@@ -45,130 +45,40 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "About", id: "about" },
-  { name: "Services", id: "services" },
-  { name: "Skills", id: "skills" },
-  { name: "Projects", id: "projects" },
-  { name: "Why Hire Me", id: "why-hire-me" },
-  { name: "Experience", id: "experience" },
-  { name: "Credentials", id: "credentials" },
-  { name: "Contact", id: "contact" },
+    { name: "Services", id: "services" },
+    { name: "Skills", id: "skills" },
+    { name: "Projects", id: "projects" },
+    { name: "Why Hire Me", id: "why-hire-me" },
+    { name: "Experience", id: "experience" },
+    { name: "Credentials", id: "credentials" },
+    { name: "Contact", id: "contact" },
   ];
 
   return (
-    <nav
-      className="
-      fixed
-      top-0
-      left-0
-      w-full
-      z-50
-      backdrop-blur-lg
-      bg-black/30
-      border-b
-      border-white/10
-      "
-    >
-      <div
-        className="
-        max-w-7xl
-        mx-auto
-        flex
-        justify-between
-        items-center
-        px-6
-        py-5
-        "
-      >
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
         {/* Logo */}
-        <a
-          href="#home"
-          className="
-          text-2xl
-          font-bold
-          text-sky-400
-          "
-        >
-          Devansh
-        </a>
+        <a href="#home" className="text-2xl font-bold text-sky-400">Devansh</a>
 
         {/* Desktop Menu */}
-        <ul
-          className="
-          hidden
-          md:flex
-          gap-8
-          items-center
-          "
-        >
+        <ul className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className={`
-                  transition-all
-                  duration-300
-                  ${
-                    activeSection === link.id
-                      ? "text-sky-400 font-semibold"
-                      : "text-gray-300 hover:text-sky-400"
-                  }
-                `}
-              >
-                {link.name}
-              </a>
+              <a href={`#${link.id}`} className={`transition-all duration-300 ${activeSection === link.id ? "text-sky-400 font-semibold" : "text-gray-300 hover:text-sky-400"}`}>{link.name}</a>
             </li>
           ))}
         </ul>
 
         {/* Mobile Button */}
-        <button
-          className="
-          md:hidden
-          text-2xl
-          text-white
-          "
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+        <button className=" md:hidden text-2xl text-white" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <FaTimes /> : <FaBars />}</button></div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div
-          className="
-          md:hidden
-          bg-[#0b0b16]
-          border-t
-          border-white/10
-          "
-        >
-          <ul
-            className="
-            flex
-            flex-col
-            p-6
-            gap-5
-            "
-          >
+        <div className="md:hidden bg-[#0b0b16] border-t border-white/10">
+          <ul className="flex flex-col p-6 gap-5">
             {navLinks.map((link) => (
               <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  onClick={() => setMenuOpen(false)}
-                  className={`
-                    block
-                    transition-all
-                    duration-300
-                    ${
-                      activeSection === link.id
-                        ? "text-sky-400 font-semibold"
-                        : "text-gray-300"
-                    }
-                  `}
-                >
-                  {link.name}
-                </a>
+                <a href={`#${link.id}`} onClick={() => setMenuOpen(false)} className={`block transition-all duration-300 ${activeSection === link.id ? "text-sky-400 font-semibold" : "text-gray-300"}`}>{link.name}</a>
               </li>
             ))}
           </ul>

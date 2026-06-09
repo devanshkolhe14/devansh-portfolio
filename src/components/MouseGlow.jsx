@@ -21,23 +21,6 @@ export default function MouseGlow() {
   }, []);
 
   return (
-    <div
-      className="
-      fixed
-      pointer-events-none
-      z-0
-      w-[400px]
-      h-[400px]
-      rounded-full
-      blur-[120px]
-      bg-sky-500/20
-      transition-all
-      duration-200
-      "
-      style={{
-        left: position.x - 200,
-        top: position.y - 200,
-      }}
-    />
+    <div className="fixed pointer-events-none z-0 w-[400px] h-[400px] rounded-full blur-[120px] bg-sky-500/20 transition-all duration-200" style={{left: position.x - 200, top: position.y - 200,}}/>
   );
 }
