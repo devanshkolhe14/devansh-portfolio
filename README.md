@@ -1,16 +1,52 @@
-# React + Vite
+# Devansh Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive personal portfolio website showcasing my skills, projects, and frontend development journey.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://devanshkolheportfolio.netlify.app
 
-## React Compiler
+## 📌 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive Design
+- Modern UI
+- Smooth Navigation
+- Project Showcase
+- Skills Section
+- Contact Section
+- Mobile Friendly Layout
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+
+## 📂 Project Structure
+
+```bash
+src/
+public/
+index.html
+package.json
+```
+
+## 💻 Installation
+
+```bash
+git clone https://github.com/devanshkolhe14/devansh-portfolio.git
+
+cd devansh-portfolio
+
+npm install
+
+npm run dev
+```
+
+## 👨‍💻 Author
+
+Devansh Kolhe
+
+Frontend Developer from Mumbai, India
