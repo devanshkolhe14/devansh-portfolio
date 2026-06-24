@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCertificate, FaBriefcase, FaCheckCircle, FaTimes,} from "react-icons/fa";
 import experienceLetter from "../assets/credentials/experience-letter.jpg";
-import certificate from "../assets/credentials/frontend-certificate.png";
+import certificate from "../assets/credentials/frontend-certificate.jpeg";
 
 export default function Credentials() {
   const [selectedImage, setSelectedImage] = useState(null);
